@@ -62,7 +62,7 @@ class Storage:
                 cash_balance REAL NOT NULL
             );
         """)
-        # Seed defaults if the default card doesn't exist yet
+
         existing = conn.execute(
             "SELECT COUNT(*) FROM cards WHERE card_number = ?",
             (DEFAULT_CARD_NUMBER,),
